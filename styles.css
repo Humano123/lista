@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    background: fixed;
+    background-color: blue;
+    animation: mudarF 5s infinite;
+}
+
+@keyframes mudarF {
+    0% {
+        background-color:blue;
+    }
+    50% {
+        background-color: purple;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+#ingredient-list {
+    list-style-type: none;
+    padding: 0;
+}
+#ingredient-list li {
+    margin: 5px 0;
+}
+#remover {
+    margin-left: 10px;
+    color: red;
+    cursor: pointer;
+}
+.tudo {
+    border-radius: 5px;
+    transform: rotateX(67deg) rotateZ(-45deg) translateY(-80px);
+    border: 2px solid black;
+    
+    transition: all 2s;
+}
+
+.tudo:hover {
+    animation: mudar 2s infinite;
+    transform: rotate(0deg) translate(0px);
+}
+@keyframes mudar {
+    0% {
+        border: 2px solid blue;
+    }
+    25% {
+        border: 2px solid red;
+    }
+    50% {
+        border: 2px solid purple;
+    }
+    75% {
+        border: 2px solid green;
+    }
+    100% {
+        border: 2px solid blue;
+    }
+}
